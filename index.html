@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <!-- ============================================
+         META TAGS & SEO
+         ============================================ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="שליחות שוק רמלה - שירות משלוחים מהיר ומקצועי ממשוק רמלה לביתכם. משלוחים ב-30-60 דקות בימי ה-ו, וב-1-2 שעות בימי א-ד. פעיל בימי א-ו בשעות 07:00-17:00. משרת את רמלה, מרכז רמלה וג'ואריש. רח פסטר 7 רמלה. טלפון: 052-4055562">
+    <meta name="keywords" content="שליחות שוק רמלה, משלוחים רמלה, שוק רמלה, משלוחים מהירים, רח פסטר 7 רמלה, ג'ואריש">
+    <meta name="author" content="שליחות שוק רמלה">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="שליחות שוק רמלה - משלוחים מהירים לביתכם">
+    <meta property="og:description" content="שירות משלוחים מקצועי ממשוק רמלה. משלוחים מהירים ב-30-60 דקות בימי ה-ו. רח פסטר 7 רמלה. טלפון: 052-4055562">
+    <meta property="og:locale" content="he_IL">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="שליחות שוק רמלה - משלוחים מהירים">
+    <meta name="twitter:description" content="שירות משלוחים מקצועי ממשוק רמלה לביתכם. רח פסטר 7 רמלה">
+    
+    <title>שליחות שוק רמלה - משלוחים מהירים לביתכם | רח פסטר 7 רמלה</title>
+    
+    <!-- ============================================
+         STYLESHEETS & FONTS
+         ============================================ -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Rubik:wght@400;600;700;800;900&family=Heebo:wght@400;500;700;800;900&family=Varela+Round&family=Secular+One&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+    
+    <!-- ============================================
+         STRUCTURED DATA (JSON-LD)
+         ============================================ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "שליחות שוק רמלה",
+      "description": "שירות משלוחים מהיר ומקצועי ממשוק רמלה לביתכם",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "רח פסטר 7",
+        "addressLocality": "רמלה",
+        "addressCountry": "IL"
+      },
+      "telephone": "052-4055562",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "07:00",
+          "closes": "17:00"
+        }
+      ],
+      "areaServed": ["רמלה", "מרכז רמלה", "ג'ואריש"],
+      "priceRange": "$$"
+    }
+    </script>
+</head>
+<body>
+    <!-- ============================================
+         HEADER SECTION
+         ============================================ -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">שליחות שוק רמלה</h1>
+            <p class="tagline">שליחויות משוק רמלה</p>
+        </div>
+    </header>
+
+    <!-- ============================================
+         MAIN CONTENT
+         ============================================ -->
+    <main>
+        <!-- Hero Section with Map -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">צריכים עזרה בלקיחת המוצרים הביתה?</h2>
+                    <p class="hero-description">
+                        תגיעו לחנות תבצעו הזמנה ואנחנו נשלח לכם את המוצרים הביתה
+                    </p>
+                    <div class="cta-box address-box">
+                        <p class="cta-text">רח פסטר 7 רמלה</p>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <h3 class="map-section-title">מיקום ואזורי שירות</h3>
+                    <div id="map" class="map-wrapper"></div>
+                    <div class="map-legend">
+                        <h3 class="legend-title">אזורי שירות</h3>
+                        <div class="legend-items">
+                            <div class="legend-item clickable" id="legend-ramla">
+                                <span class="legend-color" style="background: #FF6B35;"></span>
+                                <span>רמלה</span>
+                                <span class="toggle-icon">👁️</span>
+                            </div>
+                            <div class="legend-item clickable" id="legend-center">
+                                <span class="legend-color" style="background: #F7931E;"></span>
+                                <span>מרכז רמלה</span>
+                                <span class="toggle-icon">👁️</span>
+                            </div>
+                            <div class="legend-item clickable" id="legend-juarish">
+                                <span class="legend-color" style="background: #4ECDC4;"></span>
+                                <span>ג'ואריש</span>
+                                <span class="toggle-icon">👁️</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Delivery Times Section -->
+        <section class="delivery-info">
+            <div class="container">
+                <h2 class="section-title">זמני הגעת המשלוח</h2>
+                <div class="delivery-times">
+                    <div class="time-card fast">
+                        <div class="time-icon">⚡</div>
+                        <h3>בימי ה-ו</h3>
+                        <p class="time-range">בין 30-60 דק</p>
+                    </div>
+                    <div class="time-card standard">
+                        <div class="time-icon">🚚</div>
+                        <h3>בימי א-ד</h3>
+                        <p class="time-range">בין 1-2 שעות</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Details Section -->
+        <section class="details">
+            <div class="container">
+                <div class="details-grid">
+                    <div class="detail-card">
+                        <div class="detail-icon">📅</div>
+                        <h3>ימי עבודה</h3>
+                        <p>א-ו</p>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">🕐</div>
+                        <h3>שעות</h3>
+                        <p>07:00-17:00</p>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">📍</div>
+                        <h3>אזור פעילות</h3>
+                        <p>רמלה מרכז רמלה וג'ואריש</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-box">
+                    <div class="phone-icon">📞</div>
+                    <a href="tel:0524055562" class="phone-link">052-4055562</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         FOOTER SECTION
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 שליחות שוק רמלה. כל הזכויות שמורות.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
