@@ -14,8 +14,20 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://siso.delivery/">
     
+    <!-- Alternate Language Versions (hreflang) -->
+    <link rel="alternate" hreflang="he" href="https://siso.delivery/">
+    <link rel="alternate" hreflang="ar" href="https://siso.delivery/ar">
+    <link rel="alternate" hreflang="en" href="https://siso.delivery/en">
+    <link rel="alternate" hreflang="x-default" href="https://siso.delivery/">
+    
     <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="IL">
+    <meta name="geo.placename" content="Ramla">
+    <meta name="geo.position" content="31.92442;34.87358">
+    <meta name="ICBM" content="31.92442, 34.87358">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -23,11 +35,19 @@
     <meta property="og:title" content="שליחות שוק רמלה - משלוחים מהירים לביתכם">
     <meta property="og:description" content="שירות משלוחים מקצועי ממשוק רמלה. משלוחים מהירים ב-30-60 דקות בימי ה-ו. רח פסטר 7 רמלה. טלפון: 054-5814659">
     <meta property="og:locale" content="he_IL">
+    <meta property="og:locale:alternate" content="ar_IL">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:site_name" content="שליחות שוק רמלה">
+    <meta property="og:image" content="https://siso.delivery/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="שליחות שוק רמלה - משלוחים מהירים">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="שליחות שוק רמלה - משלוחים מהירים">
     <meta name="twitter:description" content="שירות משלוחים מקצועי ממשוק רמלה לביתכם. רח פסטר 7 רמלה">
+    <meta name="twitter:image" content="https://siso.delivery/og-image.jpg">
     
     <title>שליחות שוק רמלה - משלוחים מהירים לביתכם | רח פסטר 7 רמלה</title>
     
@@ -56,15 +76,28 @@
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "שליחות שוק רמלה",
-      "description": "שירות משלוחים מהיר ומקצועי ממשוק רמלה לביתכם",
+      "@id": "https://siso.delivery/#business",
+      "name": "סיסו משלוחים",
+      "alternateName": "שליחות שוק רמלה",
+      "description": "שירות משלוחים מהיר ומקצועי ממשוק רמלה לביתכם. משלוחים ב-30-60 דקות בימי ה-ו, וב-1-2 שעות בימי א-ד",
+      "url": "https://siso.delivery/",
+      "logo": "https://siso.delivery/logo.png",
+      "image": "https://siso.delivery/og-image.jpg",
+      "telephone": "+972545814659",
+      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "רח פסטר 7",
         "addressLocality": "רמלה",
+        "addressRegion": "מרכז",
+        "postalCode": "72100",
         "addressCountry": "IL"
       },
-      "telephone": "054-5814659",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 31.92442,
+        "longitude": 34.87358
+      },
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -73,8 +106,47 @@
           "closes": "17:00"
         }
       ],
-      "areaServed": ["רמלה", "מרכז רמלה", "ג'ואריש"],
-      "priceRange": "$$"
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "רמלה"
+        },
+        {
+          "@type": "City",
+          "name": "מרכז רמלה"
+        },
+        {
+          "@type": "City",
+          "name": "ג'ואריש"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "שירותי משלוחים",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "משלוח מהיר",
+              "description": "משלוח ב-30-60 דקות בימי ה-ו"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "משלוח סטנדרטי",
+              "description": "משלוח ב-1-2 שעות בימי א-ד"
+            }
+          }
+        ]
+      },
+      "sameAs": [
+        "https://siso.delivery/",
+        "https://siso.delivery/ar",
+        "https://siso.delivery/en"
+      ]
     }
     </script>
 </head>

@@ -14,8 +14,20 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://siso.delivery/ar">
     
+    <!-- Alternate Language Versions (hreflang) -->
+    <link rel="alternate" hreflang="he" href="https://siso.delivery/">
+    <link rel="alternate" hreflang="ar" href="https://siso.delivery/ar">
+    <link rel="alternate" hreflang="en" href="https://siso.delivery/en">
+    <link rel="alternate" hreflang="x-default" href="https://siso.delivery/">
+    
     <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="IL">
+    <meta name="geo.placename" content="Ramla">
+    <meta name="geo.position" content="31.92442;34.87358">
+    <meta name="ICBM" content="31.92442, 34.87358">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -23,11 +35,19 @@
     <meta property="og:title" content="سيسو للشحنات - توصيل سريع إلى منزلك">
     <meta property="og:description" content="خدمة توصيل مهنية من سوق الرملة. توصيل سريع خلال 30-60 دقيقة في أيام الخميس والجمعة. شارع فاستر 7 الرملة. الهاتف: 054-5814659">
     <meta property="og:locale" content="ar_IL">
+    <meta property="og:locale:alternate" content="he_IL">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:site_name" content="سيسو للشحنات">
+    <meta property="og:image" content="https://siso.delivery/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="سيسو للشحنات - توصيل سريع">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="سيسو للشحنات - توصيل سريع">
     <meta name="twitter:description" content="خدمة توصيل مهنية من سوق الرملة إلى منزلك. شارع فاستر 7 الرملة">
+    <meta name="twitter:image" content="https://siso.delivery/og-image.jpg">
     
     <title>سيسو للشحنات - توصيل سريع إلى منزلك | شارع فاستر 7 الرملة</title>
     
@@ -56,15 +76,28 @@
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "سيسوسيسو للتوصيل",
-      "description": "خدمة توصيل سريعة ومهنية من سوق الرملة إلى منزلك",
+      "@id": "https://siso.delivery/#business",
+      "name": "سيسو للشحنات",
+      "alternateName": "سيسو للتوصيل",
+      "description": "خدمة توصيل سريعة ومهنية من سوق الرملة إلى منزلك. توصيل خلال 30-60 دقيقة في أيام الخميس والجمعة، و1-2 ساعة في أيام الأحد-الأربعاء",
+      "url": "https://siso.delivery/ar",
+      "logo": "https://siso.delivery/logo.png",
+      "image": "https://siso.delivery/og-image.jpg",
+      "telephone": "+972545814659",
+      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "شارع فاستر 7",
         "addressLocality": "الرملة",
+        "addressRegion": "الوسط",
+        "postalCode": "72100",
         "addressCountry": "IL"
       },
-      "telephone": "054-5814659",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 31.92442,
+        "longitude": 34.87358
+      },
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -73,8 +106,47 @@
           "closes": "17:00"
         }
       ],
-      "areaServed": ["الرملة", "وسط الرملة", "جوارش"],
-      "priceRange": "$$"
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "الرملة"
+        },
+        {
+          "@type": "City",
+          "name": "وسط الرملة"
+        },
+        {
+          "@type": "City",
+          "name": "جوارش"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "خدمات التوصيل",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "توصيل سريع",
+              "description": "توصيل خلال 30-60 دقيقة في أيام الخميس والجمعة"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "توصيل عادي",
+              "description": "توصيل خلال 1-2 ساعة في أيام الأحد-الأربعاء"
+            }
+          }
+        ]
+      },
+      "sameAs": [
+        "https://siso.delivery/",
+        "https://siso.delivery/ar",
+        "https://siso.delivery/en"
+      ]
     }
     </script>
     <style>

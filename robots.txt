@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://siso.delivery/sitemap.xml
+
+# Disallow admin or private areas (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all language versions
+Allow: /
+Allow: /ar
+Allow: /en
+
+# Crawl-delay (optional, adjust if needed)
+Crawl-delay: 1
+
