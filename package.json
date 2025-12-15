@@ -1,24 +1,12 @@
 {
   "name": "shuk2-delivery",
   "version": "1.0.0",
-  "description": "שליחות שוק רמלה - Delivery service website",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "engines": {
-    "node": ">=14.0.0",
-    "npm": ">=6.0.0"
-  },
+  "description": "שליחות שוק רמלה - Static delivery service website",
   "keywords": [
     "delivery",
     "ramla",
     "market"
   ],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.18.2"
-  }
+  "license": "ISC"
 }
-
