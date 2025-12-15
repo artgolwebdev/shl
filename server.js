@@ -44,6 +44,12 @@ app.use((req, res, next) => {
 // Serve static files from the root directory
 app.use(express.static(path.join(__dirname)));
 
+// Sitemap route
+app.get('/sitemap.xml', (req, res) => {
+    res.setHeader('Content-Type', 'application/xml');
+    res.sendFile(path.join(__dirname, 'sitemap.xml'));
+});
+
 // Language routing
 // Arabic version
 app.get('/ar', (req, res) => {
