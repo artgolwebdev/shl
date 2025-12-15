@@ -44,6 +44,7 @@
     
     <!-- Custom JavaScript -->
     <script src="script.js"></script>
+    <script src="phone-modal.js"></script>
     
     <!-- ============================================
          STRUCTURED DATA (JSON-LD)
@@ -182,13 +183,32 @@
         <!-- Contact Section -->
         <section class="contact-section">
             <div class="container">
-                <div class="contact-box">
+                <div class="contact-box" id="phone-button">
                     <div class="phone-icon">📞</div>
-                    <a href="tel:0545814659" class="phone-link">054-5814659</a>
+                    <span class="phone-link">054-5814659</span>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Phone Contact Popup Modal -->
+    <div id="phone-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 class="modal-title">Contact Us</h2>
+            <p class="modal-subtitle">Choose a way to contact</p>
+            <div class="modal-buttons">
+                <a href="tel:0545814659" class="modal-btn call-btn">
+                    <span class="btn-icon">📞</span>
+                    <span class="btn-text">Call Now</span>
+                </a>
+                <a href="https://wa.me/972545814659" target="_blank" class="modal-btn whatsapp-btn">
+                    <span class="btn-icon">💬</span>
+                    <span class="btn-text">WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- ============================================
          FOOTER SECTION

@@ -891,6 +891,7 @@ html[dir="ltr"] .container {
     animation: bounceIn 1s ease-out 0.7s both;
     min-height: 60px; /* Better touch target */
     cursor: pointer;
+    user-select: none;
 }
 
 @keyframes bounceIn {
@@ -996,6 +997,153 @@ html[dir="ltr"] .container {
     font-weight: 500;
     position: relative;
     z-index: 1;
+}
+
+/* ============================================
+   PHONE MODAL POPUP
+   ============================================ */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease-out;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, var(--white) 0%, #fafbfc 100%);
+    margin: auto;
+    padding: 2.5rem;
+    border-radius: 25px;
+    box-shadow: var(--shadow-strong);
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    animation: modalSlideIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    line-height: 1;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.modal-close:hover {
+    color: var(--text-dark);
+    background: rgba(0, 0, 0, 0.1);
+    transform: rotate(90deg);
+}
+
+.modal-title {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+    font-family: 'Secular One', 'Rubik', sans-serif;
+}
+
+.modal-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-family: 'Assistant', sans-serif;
+}
+
+.modal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1.2rem 2rem;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: var(--shadow);
+    min-height: 60px;
+    font-family: 'Heebo', 'Assistant', sans-serif;
+}
+
+.modal-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: var(--shadow-strong);
+}
+
+.call-btn {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: var(--white);
+}
+
+.call-btn:hover {
+    background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+}
+
+.whatsapp-btn {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: var(--white);
+}
+
+.whatsapp-btn:hover {
+    background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+}
+
+.btn-icon {
+    font-size: 1.5rem;
+    display: inline-block;
+}
+
+.btn-text {
+    font-weight: 800;
+}
+
+.contact-box {
+    cursor: pointer;
+}
+
+.contact-box .phone-link {
+    cursor: pointer;
 }
 
 /* ============================================
@@ -1181,6 +1329,25 @@ html[dir="ltr"] .container {
         flex-direction: column;
         gap: 0.75rem;
         min-height: auto;
+    }
+    
+    .modal-content {
+        padding: 2rem 1.5rem;
+        max-width: 90%;
+    }
+    
+    .modal-title {
+        font-size: 1.6rem;
+    }
+    
+    .modal-subtitle {
+        font-size: 1rem;
+    }
+    
+    .modal-btn {
+        padding: 1rem 1.5rem;
+        font-size: 1.1rem;
+        min-height: 55px;
     }
     
     .phone-icon {
@@ -1382,6 +1549,41 @@ html[dir="ltr"] .container {
         gap: 0.6rem;
         border-radius: 15px;
         min-height: auto;
+    }
+    
+    .modal-content {
+        padding: 1.5rem 1.2rem;
+        max-width: 95%;
+        border-radius: 20px;
+    }
+    
+    .modal-close {
+        top: 0.75rem;
+        left: 0.75rem;
+        width: 30px;
+        height: 30px;
+        font-size: 1.5rem;
+    }
+    
+    .modal-title {
+        font-size: 1.4rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .modal-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .modal-btn {
+        padding: 0.9rem 1.2rem;
+        font-size: 1rem;
+        min-height: 50px;
+        border-radius: 12px;
+    }
+    
+    .btn-icon {
+        font-size: 1.3rem;
     }
     
     .phone-icon {
