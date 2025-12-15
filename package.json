@@ -2,6 +2,10 @@
   "name": "shuk2-delivery",
   "version": "1.0.0",
   "description": "שליחות שוק רמלה - Static delivery service website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "keywords": [
     "delivery",
     "ramla",
