@@ -1,6 +1,7 @@
 /**
  * Simple Express server to serve static files for Heroku deployment
  * Supports custom domain siso.delivery with HTTPS
+ * Multi-language support: Hebrew (default), Arabic, English
  */
 
 const express = require('express');
@@ -43,7 +44,18 @@ app.use((req, res, next) => {
 // Serve static files from the root directory
 app.use(express.static(path.join(__dirname)));
 
-// Route for the main page
+// Language routing
+// Arabic version
+app.get('/ar', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index-ar.html'));
+});
+
+// English version
+app.get('/en', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index-en.html'));
+});
+
+// Default Hebrew version
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
@@ -52,5 +64,6 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
     console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+    console.log(`Available languages: Hebrew (/), Arabic (/ar), English (/en)`);
 });
 
