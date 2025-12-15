@@ -175,7 +175,7 @@ const SERVICE_AREAS = {
 
 ## 👥 Support
 
-For issues or questions, contact: **052-4055562**
+For issues or questions, contact: **054-5814659**
 
 ---
 
