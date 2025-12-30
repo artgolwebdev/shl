@@ -18,9 +18,13 @@ A modern, SEO-optimized landing page for Shuk Ramla delivery service with intera
 - **RTL Support**: Full right-to-left support for Hebrew content
 - **Responsive Design**: Mobile-first approach with breakpoints for tablet and mobile devices
 - **Interactive Map**: Leaflet.js integration with service area visualization
-- **Modern UI**: Gradient backgrounds, smooth animations, and modern design patterns
+- **Modern UI/UX**: Glassmorphism effects, gradient backgrounds, and premium design patterns
+- **Dynamic Animations**: Animated motorcycle delivery track and floating decorative logos
+- **Advanced Language Switcher**: Modern dropdown language selector with glassmorphism and animations
+- **Integrated Branding**: Custom logos integrated into header and hero sections
 - **Accessibility**: Semantic HTML5 structure and proper ARIA labels
-- **Performance**: Optimized fonts loading with preconnect
+- **Performance**: Optimized fonts loading and asset delivery
+- **Mobile Optimized**: Responsive header with row-layout for logos and text on small screens
 
 ## 📁 Project Structure
 
@@ -179,4 +183,4 @@ For issues or questions, contact: **054-5814659**
 
 ---
 
-**Last Updated**: 2024
+**Last Updated**: 2025

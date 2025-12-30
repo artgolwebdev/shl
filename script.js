@@ -377,6 +377,31 @@ function initializeMap() {
     initializeServiceAreas();
 }
 
-// Initialize map when DOM is fully loaded
-window.addEventListener('load', initializeMap);
+/**
+ * Handles the language dropdown toggle logic
+ */
+function initializeLanguageDropdown() {
+    const dropBtn = document.getElementById('lang-drop-btn');
+    const dropdown = document.querySelector('.language-dropdown');
+
+    if (dropBtn && dropdown) {
+        dropBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdown.classList.toggle('active');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+    }
+}
+
+// Initialize components when DOM is fully loaded
+window.addEventListener('load', () => {
+    initializeMap();
+    initializeLanguageDropdown();
+});
 
