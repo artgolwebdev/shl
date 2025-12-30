@@ -413,8 +413,8 @@ html[dir="rtl"] .logo-text-wrapper {
 
 .motorcycle-animation {
     position: absolute;
-    height: 104px;
-    top: -10px;
+    height: 70px;
+    top: 5px;
     animation: deliveryTrip 8s linear infinite;
 }
 
